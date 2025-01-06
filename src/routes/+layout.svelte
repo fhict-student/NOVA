@@ -55,7 +55,7 @@
 			<DropdownItem href="/nova#isnovavooriedereen">Is NOVA voor iedereen?</DropdownItem>
 		</Dropdown>
 		<NavLi class="cursor-pointer select-none"
-			>Bewoners <ChevronDownOutline
+			>Het gezin <ChevronDownOutline
 				class="ms-1 inline h-6 w-6 text-text-light dark:text-text-dark"
 			/></NavLi
 		>
@@ -108,11 +108,21 @@
 				>Specifieke modellen en theorieën</DropdownItem
 			>
 			<DropdownDivider />
-			<DropdownItem href="/innovatie#kritischeanalyse">Kritische analyse</DropdownItem>
-			<DropdownDivider />
 			<DropdownItem href="/innovatie#verantwoordgebruikvanslimmetechnologie"
 				>Verantwoord gebruik van slimme technologie</DropdownItem
 			>
+		</Dropdown>
+		<NavLi class="cursor-pointer select-none">
+			Vakgebied<ChevronDownOutline
+				class="ms-1 inline h-6 w-6 text-text-light dark:text-text-dark"
+			/>
+		</NavLi>
+		<Dropdown class="z-20 w-56">
+			<DropdownItem href="/vakgebied/recht">Recht</DropdownItem>
+			<DropdownDivider />
+			<DropdownItem href="/vakgebied/tp">Toegepaste Psychologie</DropdownItem>
+			<DropdownDivider />
+			<DropdownItem href="/vakgebied/cs">Cyber Security</DropdownItem>
 		</Dropdown>
 		<NavLi href="/bronnen" class="select-none">Literatuurlijst</NavLi>
 	</NavUl>
