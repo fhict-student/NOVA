@@ -3,7 +3,6 @@ import adapter from "@sveltejs/adapter-cloudflare";
 =======
 import adapter from '@sveltejs/adapter-cloudflare';
 import { importAssets } from 'svelte-preprocess-import-assets';
->>>>>>> Stashed changes
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
