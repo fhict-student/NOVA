@@ -1,12 +1,5 @@
 <script>
 	import '../app.css';
-<<<<<<< Updated upstream
-	let { children } = $props();
-</script>
-
-{@render children()}
-=======
-
 	import {
 		DarkMode,
 		Navbar,

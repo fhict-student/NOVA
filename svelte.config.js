@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-import adapter from "@sveltejs/adapter-cloudflare";
-=======
 import adapter from '@sveltejs/adapter-cloudflare';
 import { importAssets } from 'svelte-preprocess-import-assets';
 
