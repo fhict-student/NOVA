@@ -1,0 +1,103 @@
+<script>
+    import { onMount } from "svelte";
+    let activeHeading = "";
+  
+    // Array of headings to populate the TOC dynamically
+    let headings = [
+      { id: "ID1", text: "Wat is NOVA?" },
+      { id: "ID2", text: "Hoe werkt NOVA?" },
+      { id: "ID3", text: "Is NOVA voor iedereen?" },
+    ];
+  
+    // Track which heading is active
+    onMount(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              activeHeading = entry.target.id;
+            }
+          });
+        },
+        { threshold: 0.7 }
+      );
+  
+      headings.forEach((heading) => {
+        const element = document.getElementById(heading.id);
+        if (element) observer.observe(element);
+      });
+  
+      return () => observer.disconnect();
+    });
+  </script>
+  
+  <main
+    class="min-h-screen bg-background-light text-justify text-text-light dark:bg-background-dark dark:text-text-dark"
+  >
+    <!-- Table of Contents -->
+    <aside class="fixed top-20 right-5 w-60 p-4 bg-white shadow-lg dark:bg-gray-800">
+      <h2 class="text-lg font-semibold">Contents</h2>
+      <ul>
+        {#each headings as heading}
+          <li>
+            <a
+              href="#{heading.id}"
+              class="block py-1 text-sm font-medium hover:text-blue-500 
+              {activeHeading === heading.id ? 'text-blue-500 font-bold' : 'text-gray-700 dark:text-gray-300'}"
+            >
+              {heading.text}
+            </a>
+          </li>
+        {/each}
+      </ul>
+    </aside>
+  
+    <!-- Main Content -->
+    <div id="ID1" class="section">
+      <div class="flex justify-center bg-background-light p-4 dark:bg-background-dark">
+        <div
+          class="mt-20 w-full max-w-3xl rounded-lg bg-background-light p-6 shadow-lg dark:bg-background-dark"
+        >
+          <h1 class="mb-1 text-center text-2xl font-bold">Wat is NOVA?</h1>
+          <p class="mb-4 text-base/7">Text</p>
+          <p class="text-base/7">Text</p>
+        </div>
+      </div>
+    </div>
+  
+    <div id="ID2" class="section">
+      <div class="flex justify-center bg-background-light p-4 dark:bg-background-dark">
+        <div
+          class="mt-5 w-full max-w-3xl rounded-lg bg-background-light p-6 shadow-lg dark:bg-background-dark"
+        >
+          <h1 class="mb-1 text-center text-2xl font-bold">Hoe werkt NOVA?</h1>
+          <p class="mb-4 text-base/7">Text</p>
+          <p class="mb-4 text-base/7">Text</p>
+          <p class="mb-4 text-base/7">Text</p>
+          <p class="text-base/7">Text</p>
+        </div>
+      </div>
+    </div>
+  
+    <div id="ID3" class="section">
+      <div class="flex justify-center bg-background-light p-4 dark:bg-background-dark">
+        <div
+          class="mb-5 mt-5 w-full max-w-3xl rounded-lg bg-background-light p-6 shadow-lg dark:bg-background-dark"
+        >
+          <h1 class="mb-1 text-center text-2xl font-bold">Is NOVA voor iedereen?</h1>
+          <p class="mb-4 text-base/7">Text</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <style>
+    main {
+      display: flex;
+    }
+  
+    .section {
+      scroll-margin-top: 80px; /* Adjust for fixed TOC or navbar */
+    }
+  </style>
+  
