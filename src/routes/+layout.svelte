@@ -42,11 +42,11 @@
 <Navbar class="fixed {backClass} select-none p-0">
 	<NavHamburger />
 	<NavUl>
-		<!-- OVER NOVA -->
 		<NavLi href="/" class="flex  gap-2"
 			><enhanced:img src="$lib/media/favicon.png?w=20" alt="logo" />Home</NavLi
 		>
 
+		<!-- OVER NOVA -->
 		<NavLi class="cursor-pointer">
 			Over NOVA<ChevronDownOutline class={chevronClass} />
 		</NavLi>
