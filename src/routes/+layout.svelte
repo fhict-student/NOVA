@@ -39,11 +39,11 @@
 	];
 </script>
 
-<Navbar class="fixed {backClass} select-none p-0">
+<Navbar fluid="false" class="fixed {backClass} select-none p-0">
 	<NavHamburger />
 	<NavUl>
-		<NavLi href="/" class="flex  gap-2"
-			><enhanced:img src="$lib/media/favicon.png?w=20" alt="logo" />Home</NavLi
+		<NavLi href="/" class="flex gap-2"
+			><enhanced:img src="$lib/media/favicon.png?w=20" alt="logo" class="min-w-5" />Home</NavLi
 		>
 
 		<!-- OVER NOVA -->
@@ -64,9 +64,9 @@
 			ulClass="grid grid-flow-row gap-y-4 md:gap-x-0 auto-col-max auto-row-max"
 			items={bewoners}
 			let:item
-			class="shadow-xl dark:shadow-lg dark:shadow-gray-800 {backClass}"
-		>
-			<div class="block h-full rounded-lg p-3 hover:bg-gray-200 dark:hover:bg-gray-800 {backClass}">
+			class="shadow-xl dark:shadow-lg dark:shadow-gray-800" 
+		> <!-- {backClass} -->
+			<div class="block h-full rounded-lg p-3 hover:bg-gray-200 dark:hover:bg-gray-800 ">
 				<a href={item.naam.toLowerCase()}>
 					<picture>
 						<source srcset={item.avif} alt="{item.naam}'s foto" type="image/avif" />
@@ -82,7 +82,7 @@
 						class="font-semibold text-text-light dark:text-text-dark"
 						style="padding-top: 10px; text-align: center;"
 					>
-						{item.naam}
+						{item.naam} ({item.info})
 					</p>
 					<!-- <span class="text-sm font-light text-gray-500 dark:text-gray-400">{item.help}</span> -->
 				</a>
@@ -126,11 +126,11 @@
 			Vakgebied<ChevronDownOutline class={chevronClass} />
 		</NavLi>
 		<Dropdown class="z-20 w-56">
-			<DropdownItem href="/vakgebied/cs">Cyber Security</DropdownItem>
+			<DropdownItem href="/cs">Cyber Security</DropdownItem>
 			<DropdownDivider />
-			<DropdownItem href="/vakgebied/recht">Recht</DropdownItem>
+			<DropdownItem href="/recht">Recht</DropdownItem>
 			<DropdownDivider />
-			<DropdownItem href="/vakgebied/tp">Toegepaste Psychologie</DropdownItem>
+			<DropdownItem href="/tp">Toegepaste Psychologie</DropdownItem>
 		</Dropdown>
 
 		<!-- LITERATUURLIJST -->
