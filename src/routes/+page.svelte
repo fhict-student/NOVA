@@ -8,7 +8,7 @@
 	<section class="py-12 text-center">
 		<!-- <h1 class="text-5xl font-bold text-text-light dark:text-text-dark">Welkom bij NOVA</h1> -->
 		<h1
-			class="mt-80 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-5xl font-bold text-transparent"
+			class="mt-80 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text pb-2 text-5xl font-bold text-transparent"
 		>
 			Welkom bij NOVA
 		</h1>
@@ -17,21 +17,21 @@
 		</p>
 	</section>
 
-	<!-- <enhanced:img src="/static/arjen/profielfoto.png" alt="test" /> -->
-	<!-- <img src="/arjen/profielfoto.png" alt="test" /> -->
-
-	<div class="inline-flex gap-10">
+	<!-- <div class="inline-flex gap-10"> -->
+	<div class="flex flex-col gap-10 desktop:flex-row laptop:items-start">
 		<a
 			href="/arjen"
 			class="block h-full rounded-lg bg-background-light p-3 hover:bg-gray-200 dark:bg-background-dark dark:hover:bg-gray-800"
 		>
 			<img
 				src="$lib/media/arjen/profielfoto.png"
-				class="h-80"
+				class="min-w-72 h-80"
 				style="border-radius: 10px;"
 				alt="Gezicht van Arjen"
 			/>
-			<p class="m-3 text-center font-semibold">Arjen, 16 jaar oud</p>
+			<p class="m-3 text-center font-semibold text-text-light dark:text-text-dark">
+				Arjen, 16 jaar oud
+			</p>
 			<div
 				class="max-w-80 text-justify text-text-light dark:text-text-dark"
 				style="padding-top: 10px;"
@@ -51,11 +51,13 @@
 		>
 			<img
 				src="$lib/media/marie/profielfoto.png"
-				class="h-80"
+				class="min-w-72 h-80"
 				style="border-radius: 10px;"
 				alt="Gezicht van Marie"
 			/>
-			<p class="m-3 text-center font-semibold">Marie, 47 jaar oud</p>
+			<p class="m-3 text-center font-semibold text-text-light dark:text-text-dark">
+				Marie, 47 jaar oud
+			</p>
 			<div
 				class="max-w-80 text-justify text-text-light dark:text-text-dark"
 				style="padding-top: 10px;"
@@ -75,11 +77,13 @@
 		>
 			<img
 				src="$lib/media/helena/profielfoto.png"
-				class="h-80"
+				class="min-w-72 h-80"
 				style="border-radius: 10px;"
 				alt="Gezicht van Helena"
 			/>
-			<p class="m-3 text-center font-semibold">Helena, 73 jaar oud</p>
+			<p class="m-3 text-center font-semibold text-text-light dark:text-text-dark">
+				Helena, 73 jaar oud
+			</p>
 			<div
 				class="max-w-80 text-justify text-text-light dark:text-text-dark"
 				style="padding-top: 10px;"
