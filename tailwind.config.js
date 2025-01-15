@@ -12,6 +12,7 @@ export default {
 		extend: {
 			screens: {
 				desktop: '1024px',
+				laptop: '880px',
 				tablet: '640px',
 				mobile: '576px'
 			}
