@@ -5,7 +5,7 @@
 <main
 	class="min-h-screen bg-background-light text-left text-text-light dark:bg-background-dark dark:text-text-dark"
 >
-	<div id="specifiekemodellenentheorieën" class="flex justify-center p-4">
+	<div id="literatuurlijst" class="flex justify-center p-4">
 		<div
 			class="mt-20 w-full max-w-3xl rounded-lg bg-background-light p-6 shadow-lg dark:bg-background-dark"
 		>
@@ -159,10 +159,58 @@
 				Litigation Forum):
 				https://worldlawyersforum.org/articles/the-rise-of-artificial-intelligence-in-litigation-challenges-and-opportunities-explained/
 			</p>
-			<p style="text-indent: -3em;" class="mb-4 ml-11 text-base/7">
+			<p style="text-indent: -3em;" class="ml-11 text-base/7">
 				Zeng, Y., Lu, J., & Wang, X. (2020). Biometric security systems in smart homes: A review.
 				Journal of Cybersecurity, 8(4), 33-42.
 			</p>
 		</div>
 	</div>
+
+	<div id="software" class="flex justify-center p-4">
+		<div
+			class="w-full max-w-3xl rounded-lg bg-background-light p-6 shadow-lg dark:bg-background-dark"
+		>
+			<h1 class="mb-1 text-center text-2xl font-bold">Gebruikte Software en Services</h1>
+			<p class="mb-4 text-base/7">
+				Cloudflare Pages - <a href="https://developers.cloudflare.com/pages/"
+					>https://developers.cloudflare.com/pages/</a
+				>
+			</p>
+			<p class="mb-4 text-base/7">
+				Flowbite Svelte - <a href="https://flowbite-svelte.com/">https://flowbite-svelte.com/</a>
+			</p>
+			<p class="mb-4 text-base/7">
+				Flux Dev - <a href="https://civitai.com/models/618692/flux"
+					>https://civitai.com/models/618692/flux</a
+				>
+			</p>
+			<p class="mb-4 text-base/7">
+				Forge WebUI - <a href="https://github.com/lllyasviel/stable-diffusion-webui-forge"
+					>https://github.com/lllyasviel/stable-diffusion-webui-forge</a
+				>
+			</p>
+			<p class="mb-4 text-base/7">
+				GitHub - <a href="https://github.com">https://github.com</a>
+			</p>
+			<p class="mb-4 text-base/7">
+				HeyGen - <a href="https://www.heygen.com/">https://www.heygen.com/</a>
+			</p>
+			<p class="mb-4 text-base/7">
+				Hovercode - <a href="https://hovercode.com/">https://hovercode.com/</a>
+			</p>
+			<p class="mb-4 text-base/7">
+				Svelte - <a href="https://github.com/sveltejs/svelte">https://github.com/sveltejs/svelte</a>
+			</p>
+			<p class="mb-4 text-base/7">
+				Tailwind CSS - <a href="https://tailwindcss.com/docs">https://tailwindcss.com/docs</a>
+			</p>
+		</div>
+	</div>
 </main>
+
+<style>
+	a {
+		color: rgb(28 100 242);
+		text-decoration: underline;
+	}
+</style>
