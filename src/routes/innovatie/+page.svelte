@@ -3,7 +3,7 @@
 </svelte:head>
 
 <main
-	class="scroll- min-h-screen bg-background-light text-justify text-text-light dark:bg-background-dark dark:text-text-dark"
+	class="min-h-screen bg-background-light text-justify text-text-light dark:bg-background-dark dark:text-text-dark"
 >
 	<div id="specifiekemodellenentheorieën" class="flex justify-center p-4">
 		<div
