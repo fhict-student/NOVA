@@ -18,8 +18,8 @@
 	<h1 class="mb-3 text-xl font-bold">Marie's ervaring</h1>
 	<div class="container mx-auto px-4 pb-8">
 		<div class="flex flex-col gap-8 laptop:flex-row laptop:items-start">
-			<div class="video-container w-full laptop:w-1/2">
-				<video class="" src="$lib/media/marie/marie-vid.mp4" controls loop>
+			<div class="laptop:w-1/2 desktop:pl-40">
+				<video class="" src="$lib/media/marie/marie-vid.mp4" autoplay controls loop>
 					<track kind="captions" /></video
 				>
 			</div>
