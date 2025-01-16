@@ -2,6 +2,20 @@
 	<title>NOVA - Home</title>
 </svelte:head>
 
+<script>
+	import ArjenAvif from '$lib/media/arjen/profielfoto.avif';
+	import ArjenWebp from '$lib/media/arjen/profielfoto.webp';
+	import ArjenPng from '$lib/media/arjen/profielfoto.png';
+
+	import MarieAvif from '$lib/media/marie/profielfoto.avif';
+	import MarieWebp from '$lib/media/marie/profielfoto.webp';
+	import MariePng from '$lib/media/marie/profielfoto.png';
+
+	import HelenaAvif from '$lib/media/helena/profielfoto.avif';
+	import HelenaWebp from '$lib/media/helena/profielfoto.webp';
+	import HelenaPng from '$lib/media/helena/profielfoto.png';
+	</script>
+
 <main
 	class="flex min-h-screen flex-col items-center justify-center bg-background-light dark:bg-background-dark"
 >
@@ -18,17 +32,21 @@
 	</section>
 
 	<!-- <div class="inline-flex gap-10"> -->
-	<div class="flex flex-col gap-10 desktop:flex-row laptop:items-start">
+	<div class="flex flex-col gap-10 laptop:items-start desktop:flex-row">
 		<a
 			href="/arjen"
 			class="block h-full rounded-lg bg-background-light p-3 hover:bg-gray-200 dark:bg-background-dark dark:hover:bg-gray-800"
 		>
-			<img
-				src="$lib/media/arjen/profielfoto.png"
-				class="min-w-72 h-80"
-				style="border-radius: 10px;"
-				alt="Gezicht van Arjen"
-			/>
+			<picture>
+				<source srcset={ArjenAvif} type="image/avif" />
+				<source srcset={ArjenWebp} type="image/webp" />
+				<img
+					src={ArjenPng}
+					alt="Arjen's foto"
+					style="border-radius: 10px;"
+					class="h-80 min-w-72"
+				/>
+			</picture>
 			<p class="m-3 text-center font-semibold text-text-light dark:text-text-dark">
 				Arjen, 16 jaar oud
 			</p>
@@ -49,12 +67,17 @@
 			href="/marie"
 			class="block h-full rounded-lg bg-background-light p-3 hover:bg-gray-200 dark:bg-background-dark dark:hover:bg-gray-800"
 		>
-			<img
-				src="$lib/media/marie/profielfoto.png"
-				class="min-w-72 h-80"
-				style="border-radius: 10px;"
-				alt="Gezicht van Marie"
-			/>
+			<picture>
+				<source srcset={MarieAvif} alt="Marie's foto" type="image/avif" />
+				<source srcset={MarieWebp} alt="Marie's foto" type="image/webp" />
+				<img
+					src={MariePng}
+					alt="Marie's foto"
+					style="border-radius: 10px;"
+					class="h-80 min-w-72"
+				/>
+			</picture>
+
 			<p class="m-3 text-center font-semibold text-text-light dark:text-text-dark">
 				Marie, 47 jaar oud
 			</p>
@@ -75,12 +98,16 @@
 			href="/helena"
 			class="block h-full rounded-lg bg-background-light p-3 hover:bg-gray-200 dark:bg-background-dark dark:hover:bg-gray-800"
 		>
-			<img
-				src="$lib/media/helena/profielfoto.png"
-				class="min-w-72 h-80"
-				style="border-radius: 10px;"
-				alt="Gezicht van Helena"
-			/>
+			<picture>
+				<source srcset={HelenaAvif} type="image/avif" />
+				<source srcset={HelenaWebp} type="image/webp" />
+				<img
+					src={HelenaPng}
+					alt="Helena's foto"
+					style="border-radius: 10px;"
+					class="h-80 min-w-72"
+				/>
+			</picture>
 			<p class="m-3 text-center font-semibold text-text-light dark:text-text-dark">
 				Helena, 73 jaar oud
 			</p>
